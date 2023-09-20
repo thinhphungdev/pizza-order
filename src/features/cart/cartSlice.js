@@ -39,6 +39,10 @@ export const {
   clearCart,
 } = cartSlice.actions;
 
+// SELECTOR FUNCTION
+
+export const getCart = (state) => state.cart.cart;
+
 export const getTotalCartItemQuantity = (state) => {
   return state.cart.cart.reduce((acc, item) => acc + item.quantity, 0);
 };
